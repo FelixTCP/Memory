@@ -1,7 +1,9 @@
 package application;
 
+import application.logic.Card;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
@@ -146,5 +148,10 @@ public class Controller {
     @FXML
     void changeNamePlayerTwo(MouseEvent event) {
         player2.setText("Christian");
+    }
+
+    @FXML
+    void changeImage(MouseEvent event) {
+        img0.setImage(new Image("/images/Knerten.jpg"));
     }
 }
