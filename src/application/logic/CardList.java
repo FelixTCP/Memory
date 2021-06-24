@@ -1,6 +1,9 @@
 package application.logic;
 
+//TODO Add commentation
+
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CardList {
 
@@ -8,7 +11,7 @@ public class CardList {
     private ArrayList<Card> workList;
 
     private void createCards(){
-        for (int i = 1; i <= 36; i++) {
+        for (int i = 0; i < 36; i++) {
             String imgURL = "/images/"+i%18+".png";
             deepList.add(new Card(imgURL, i%18));
         }
@@ -20,17 +23,25 @@ public class CardList {
 
         createCards();
 
-        for (Card card : deepList) {
-            workList.add(card.copy());
-        }
+        workList = (ArrayList<Card>) deepList.clone();
     }
 
-    public ArrayList<Card> resetList(){
-        workList = new ArrayList<>();
-        for (Card card : deepList) {
-            workList.add(card.copy());
-        }
+    public void resetList(){
+        workList = (ArrayList<Card>) deepList.clone();
+    }
+
+    public void shuffle(){
+        Collections.shuffle(workList);
+    }
+
+    public ArrayList<Card> getList(){
         return workList;
     }
+
+    public Card getCard(int index){
+        return workList.get(index);
+    }
+
+
 
 }
