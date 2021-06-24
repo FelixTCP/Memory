@@ -1,6 +1,9 @@
 package application;
 
+//TODO Add commentation
+
 import application.logic.Card;
+import application.logic.CardList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -128,6 +131,14 @@ public class Controller {
     @FXML
     private Label player2Count;
 
+    private CardList cards;
+
+    @FXML
+    public void initialize(){
+        cards  = new CardList();
+        cards.shuffle();
+    }
+
     @FXML
     void addPointPlayerOne(MouseEvent event) {
         int count = Integer.parseInt(player1Count.getText())+1;
@@ -152,6 +163,44 @@ public class Controller {
 
     @FXML
     void changeImage(MouseEvent event) {
-        img0.setImage(new Image("/images/Knerten.jpg"));
+        img0.setImage(new Image(cards.getCard(0).getImgURL()));
+        img1.setImage(new Image(cards.getCard(1).getImgURL()));
+        img2.setImage(new Image(cards.getCard(2).getImgURL()));
+        img3.setImage(new Image(cards.getCard(3).getImgURL()));
+        img4.setImage(new Image(cards.getCard(4).getImgURL()));
+        img5.setImage(new Image(cards.getCard(5).getImgURL()));
+        img6.setImage(new Image(cards.getCard(6).getImgURL()));
+        img7.setImage(new Image(cards.getCard(7).getImgURL()));
+        img8.setImage(new Image(cards.getCard(8).getImgURL()));
+        img9.setImage(new Image(cards.getCard(9).getImgURL()));
+        img10.setImage(new Image(cards.getCard(10).getImgURL()));
+        img11.setImage(new Image(cards.getCard(11).getImgURL()));
+        img12.setImage(new Image(cards.getCard(12).getImgURL()));
+        img13.setImage(new Image(cards.getCard(13).getImgURL()));
+        img14.setImage(new Image(cards.getCard(14).getImgURL()));
+        img15.setImage(new Image(cards.getCard(15).getImgURL()));
+        img16.setImage(new Image(cards.getCard(16).getImgURL()));
+        img17.setImage(new Image(cards.getCard(17).getImgURL()));
+        img18.setImage(new Image(cards.getCard(18).getImgURL()));
+        img19.setImage(new Image(cards.getCard(19).getImgURL()));
+        img20.setImage(new Image(cards.getCard(20).getImgURL()));
+        img21.setImage(new Image(cards.getCard(21).getImgURL()));
+        img22.setImage(new Image(cards.getCard(22).getImgURL()));
+        img23.setImage(new Image(cards.getCard(23).getImgURL()));
+        img24.setImage(new Image(cards.getCard(24).getImgURL()));
+        img25.setImage(new Image(cards.getCard(25).getImgURL()));
+        img26.setImage(new Image(cards.getCard(26).getImgURL()));
+        img27.setImage(new Image(cards.getCard(27).getImgURL()));
+        img28.setImage(new Image(cards.getCard(28).getImgURL()));
+        img29.setImage(new Image(cards.getCard(29).getImgURL()));
+        img30.setImage(new Image(cards.getCard(30).getImgURL()));
+        img31.setImage(new Image(cards.getCard(31).getImgURL()));
+        img32.setImage(new Image(cards.getCard(32).getImgURL()));
+        img33.setImage(new Image(cards.getCard(33).getImgURL()));
+        img34.setImage(new Image(cards.getCard(34).getImgURL()));
+        img35.setImage(new Image(cards.getCard(35).getImgURL()));
+
+
+
     }
 }
