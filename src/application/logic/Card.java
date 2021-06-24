@@ -1,5 +1,7 @@
 package application.logic;
 
+//TODO Add commentation
+
 public class Card {
     private String imgURL;
     private int pairID;
