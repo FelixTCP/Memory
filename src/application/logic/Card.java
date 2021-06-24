@@ -16,4 +16,6 @@ public class Card {
     public int getPairID() {
         return pairID;
     }
+
+    public Card copy(){return new Card(imgURL,pairID);}
 }
