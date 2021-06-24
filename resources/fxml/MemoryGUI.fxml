@@ -79,7 +79,7 @@
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img30" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+            <ImageView fx:id="img30" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#changeImage" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
