@@ -1,15 +1,24 @@
-package application;
+package application.main;
 
 //TODO Add commentation
 
-import application.logic.Card;
 import application.logic.CardList;
+import application.popup.NewNamePopUp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * <h2>The class Controller is used to manage the GUI</h2>
+ *
+ * @author Felix Wensky
+ * @version 1.0.0
+ * @since 24-06-2021
+ *
+ * @see CardList
+ */
 public class Controller {
     @FXML
     private ImageView img0;
@@ -133,34 +142,62 @@ public class Controller {
 
     private CardList cards;
 
+    /**
+     * Called when the GUI is launched
+     * creates a new shuffled CardList
+     */
     @FXML
     public void initialize(){
         cards  = new CardList();
         cards.shuffle();
     }
 
+    /**
+     * Adds a point for player one
+     * @param event Unused
+     */
     @FXML
     void addPointPlayerOne(MouseEvent event) {
         int count = Integer.parseInt(player1Count.getText())+1;
         player1Count.setText(count + "");
     }
 
+    /**
+     * Adds a point for player two
+     * @param event Unused
+     */
     @FXML
     void addPointPlayerTwo(MouseEvent event) {
         int count = Integer.parseInt(player2Count.getText())+1;
         player2Count.setText(count + "");
     }
 
+    /**
+     * Changes name for player one
+     * @param event Unused
+     * @throws Exception If the NewNamePopUp.fxml can not be found
+     * @see NewNamePopUp
+     */
     @FXML
-    void changeNamePlayerOne(MouseEvent event) {
+    void changeNamePlayerOne(MouseEvent event) throws Exception {
         NewNamePopUp.display(player1);
     }
 
+    /**
+     * Changes name for player two
+     * @param event Unused
+     * @throws Exception If the NewNamePopUp.fxml can not be found
+     * @see NewNamePopUp
+     */
     @FXML
-    void changeNamePlayerTwo(MouseEvent event) {
+    void changeNamePlayerTwo(MouseEvent event) throws Exception {
         NewNamePopUp.display(player2);
     }
 
+    /**
+     * Flips all cards (used for debug)
+     * @param event Unused
+     */
     @FXML
     void changeImage(MouseEvent event) {
         img0.setImage(new Image(cards.getCard(0).getImgURL()));
