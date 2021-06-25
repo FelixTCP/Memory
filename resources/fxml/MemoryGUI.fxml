@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.main.Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.main.Controller">
    <children>
       <GridPane layoutX="350.0" layoutY="70.0">
          <columnConstraints>
@@ -30,182 +29,182 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <ImageView fx:id="img0" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#addPointPlayerOne" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="img0" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#addPointPlayerTwo" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img7" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="img7" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img12" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+            <ImageView fx:id="img12" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img13" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ImageView fx:id="img13" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img18" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+            <ImageView fx:id="img18" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img19" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <ImageView fx:id="img19" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img24" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+            <ImageView fx:id="img24" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img25" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <ImageView fx:id="img25" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img30" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#changeImage" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+            <ImageView fx:id="img30" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img31" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <ImageView fx:id="img31" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fx:id="img2" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+            <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img8" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <ImageView fx:id="img8" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img9" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <ImageView fx:id="img9" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img14" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <ImageView fx:id="img14" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img15" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <ImageView fx:id="img15" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img20" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <ImageView fx:id="img20" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img21" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <ImageView fx:id="img21" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img26" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <ImageView fx:id="img26" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img27" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <ImageView fx:id="img27" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img32" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <ImageView fx:id="img32" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img33" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <ImageView fx:id="img33" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+            <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+            <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img10" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <ImageView fx:id="img10" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img11" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <ImageView fx:id="img11" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img16" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <ImageView fx:id="img16" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img17" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <ImageView fx:id="img17" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img22" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <ImageView fx:id="img22" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img23" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <ImageView fx:id="img23" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img28" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <ImageView fx:id="img28" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img29" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <ImageView fx:id="img29" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img34" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#changeNamePlayerOne" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <ImageView fx:id="img34" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="img35" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#changeNamePlayerTwo" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
+            <ImageView fx:id="img35" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
                <image>
                   <Image url="@../images/hidden.png" />
                </image>
