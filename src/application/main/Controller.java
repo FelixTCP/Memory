@@ -15,9 +15,8 @@ import javafx.scene.input.MouseEvent;
  *
  * @author Felix Wensky
  * @version 1.0.0
- * @since 24-06-2021
- *
  * @see CardList
+ * @since 24-06-2021
  */
 public class Controller {
     @FXML
@@ -147,33 +146,36 @@ public class Controller {
      * creates a new shuffled CardList
      */
     @FXML
-    public void initialize(){
-        cards  = new CardList();
+    public void initialize() {
+        cards = new CardList();
         cards.shuffle();
     }
 
     /**
      * Adds a point for player one
+     *
      * @param event Unused
      */
     @FXML
     void addPointPlayerOne(MouseEvent event) {
-        int count = Integer.parseInt(player1Count.getText())+1;
+        int count = Integer.parseInt(player1Count.getText()) + 1;
         player1Count.setText(count + "");
     }
 
     /**
      * Adds a point for player two
+     *
      * @param event Unused
      */
     @FXML
     void addPointPlayerTwo(MouseEvent event) {
-        int count = Integer.parseInt(player2Count.getText())+1;
+        int count = Integer.parseInt(player2Count.getText()) + 1;
         player2Count.setText(count + "");
     }
 
     /**
      * Changes name for player one
+     *
      * @param event Unused
      * @throws Exception If the NewNamePopUp.fxml can not be found
      * @see NewNamePopUp
@@ -185,6 +187,7 @@ public class Controller {
 
     /**
      * Changes name for player two
+     *
      * @param event Unused
      * @throws Exception If the NewNamePopUp.fxml can not be found
      * @see NewNamePopUp
@@ -195,11 +198,35 @@ public class Controller {
     }
 
     /**
-     * Flips all cards (used for debug)
+     * Flips the given Card
+     *
      * @param event Unused
      */
     @FXML
-    void changeImage(MouseEvent event) {
+    void flipCard(MouseEvent event) {
+        int x = (int) Math.floor((event.getSceneX() - 350) / 100);
+        int y = (int) Math.floor((event.getSceneY() - 70) / 100);
+        int cardID = (6 * y + x);
+
+        ImageView[] images = {
+                img0,img1,img2,img3,img4,img5,
+                img6,img7,img8,img9,img10,img11,
+                img12,img13,img14,img15,img16,img17,
+                img18,img19,img20,img21,img22,img23,
+                img24,img25,img26,img27,img28,img29,
+                img30,img31,img32,img33,img34,img35
+        };
+
+        images[cardID].setImage(new Image(cards.getCard(cardID).getImgURL()));
+    }
+
+    /**
+     * Flips all cards (used for debug)
+     *
+     * @param event Unused
+     */
+    @FXML
+    void flipAllCards(MouseEvent event) {
         img0.setImage(new Image(cards.getCard(0).getImgURL()));
         img1.setImage(new Image(cards.getCard(1).getImgURL()));
         img2.setImage(new Image(cards.getCard(2).getImgURL()));
@@ -237,4 +264,5 @@ public class Controller {
         img34.setImage(new Image(cards.getCard(34).getImgURL()));
         img35.setImage(new Image(cards.getCard(35).getImgURL()));
     }
+
 }
