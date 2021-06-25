@@ -1,15 +1,17 @@
 package application.logic;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
- * The class CardList is used to reference the Memory-Cards in the GUI
+ * <h2>The class CardList is used to reference the Memory-Cards in the GUI</h2>
  *
  * @author Felix Wensky
  * @version 1.0.0
  * @since 24-06-2021
+ *
+ * @see application.logic.Card
  */
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class CardList {
 
@@ -63,7 +65,7 @@ public class CardList {
 
     /**
      *
-     * @param index used to reference a card in the list by its index
+     * @param index Used to reference a card in the list by its index
      * @return The card with the given index
      */
     public Card getCard(int index){

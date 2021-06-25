@@ -1,7 +1,7 @@
 package application.logic;
 
 /**
- * The class Card is used to manage the Memory-Cards in the GUI
+ * <h2>The class Card is used to manage the Memory-Cards in the GUI</h2>
  *
  * @author Felix Wensky
  * @version 1.0.0
@@ -13,8 +13,8 @@ public class Card {
     private int pairID;
 
     /**
-     * @param imgURL used to reference the Image (.png) that the Card should display
-     * @param pairID every pair of cards has a specific pairID that is used to check if that correct pair was found
+     * @param imgURL Used to reference the Image (.png) that the Card should display
+     * @param pairID Every pair of cards has a specific pairID that is used to check if that correct pair was found
      */
     public Card(String imgURL, int pairID) {
         this.imgURL = imgURL;
@@ -22,7 +22,7 @@ public class Card {
     }
 
     /**
-     * imgURL Getter
+     * Returns the imgURL
      * @return imgURL
      */
     public String getImgURL() {
@@ -30,7 +30,7 @@ public class Card {
     }
 
     /**
-     * pairID Getter
+     * Returns the pairID
      * @return pairID
      */
     public int getPairID() {
