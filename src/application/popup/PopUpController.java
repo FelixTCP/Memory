@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 /**
  * <h2>The class PopUpController is used to manage the NewNamePopUp GUI</h2>
@@ -28,14 +30,24 @@ public class PopUpController {
     private Button okButton;
 
     /**
-     * Sets player name to content of the TextField and closes the Pop-Up
+     * Sets player name to content of the TextField and closes the Pop-Up upon pressind the "Fertig" button
      * @param event Unused
      */
-
     @FXML
     void getName(ActionEvent event) {
         NewNamePopUp.p.setText(newName.getText());
         NewNamePopUp.window.close();
+    }
+    /**
+     * Sets player name to content of the TextField and closes the Pop-Up upon pressing the "Enter" key in the TextField
+     * @param event Unused
+     */
+    @FXML
+    void getNameEnter(KeyEvent event) {
+        if(event.getCode() == KeyCode.ENTER){
+            NewNamePopUp.p.setText(newName.getText());
+            NewNamePopUp.window.close();
+        }
     }
 
 }
