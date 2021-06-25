@@ -8,7 +8,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * <h2>This class displays a Popup Alert used to set a new name for a player</h2>
+ * <h2>The class NewNamePopUp is displays a Popup Alert used to set a new name for a player</h2>
  *
  * @author Felix Wensky
  * @version 1.0.0
@@ -21,7 +21,7 @@ public class NewNamePopUp {
     static Stage window;
 
     /**
-     * Static method that displays the Popup
+     * Static method that displays the Pop-Up
      * @param player The player that wants to change name
      */
     public static void display(Label player) throws Exception {

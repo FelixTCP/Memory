@@ -28,7 +28,7 @@ public class PopUpController {
     private Button okButton;
 
     /**
-     * Sets player name to content of the TextField and closes the PopUp
+     * Sets player name to content of the TextField and closes the Pop-Up
      * @param event Unused
      */
 
