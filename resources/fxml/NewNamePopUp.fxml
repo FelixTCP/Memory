@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="285.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.popup.PopUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.popup.PopUpController">
    <children>
-      <TextField fx:id="newName" layoutX="28.0" layoutY="57.0" />
+      <TextField fx:id="newName" layoutX="28.0" layoutY="57.0" onKeyPressed="#getNameEnter" />
       <Label fx:id="nameLabel" layoutX="28.0" layoutY="14.0" prefHeight="44.0" prefWidth="236.0" text="Bitte neuen Namen eingeben">
          <font>
             <Font size="18.0" />
