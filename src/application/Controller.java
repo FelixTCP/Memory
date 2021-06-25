@@ -153,12 +153,12 @@ public class Controller {
 
     @FXML
     void changeNamePlayerOne(MouseEvent event) {
-        player1.setText("Felix");
+        NewNamePopUp.display(player1);
     }
 
     @FXML
     void changeNamePlayerTwo(MouseEvent event) {
-        player2.setText("Christian");
+        NewNamePopUp.display(player2);
     }
 
     @FXML
@@ -199,8 +199,5 @@ public class Controller {
         img33.setImage(new Image(cards.getCard(33).getImgURL()));
         img34.setImage(new Image(cards.getCard(34).getImgURL()));
         img35.setImage(new Image(cards.getCard(35).getImgURL()));
-
-
-
     }
 }
