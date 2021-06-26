@@ -3,7 +3,9 @@ package application.main;
 //TODO Add commentation
 
 import application.logic.CardList;
-import application.popup.NewNamePopUp;
+import application.logic.Player;
+import application.dialog.ChangeNameDialog;
+import application.dialog.GameEndDialog;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -128,18 +130,35 @@ public class Controller {
     private ImageView img35;
 
     @FXML
-    private Label player1;
+    private Label player1Name;
 
     @FXML
     private Label player1Count;
 
     @FXML
-    private Label player2;
+    private Label player2Name;
 
     @FXML
     private Label player2Count;
 
+    @FXML
+    private ImageView playerOneOnMove;
+
+    @FXML
+    private ImageView playerTwoOnMove;
+
+
     private CardList cards;
+
+    private Player player1;
+    private Player player2;
+
+    private int pairCount;
+
+    private int flipped;
+
+    private int flippedCardOne;
+    private int flippedCardTwo;
 
     /**
      * Called when the GUI is launched
@@ -149,6 +168,19 @@ public class Controller {
     public void initialize() {
         cards = new CardList();
         cards.shuffle();
+
+        pairCount = 18;
+
+        flipped = 0;
+        flippedCardOne = -1;
+        flippedCardTwo = -1;
+
+        player1 = new Player("Spieler 1", 0, true);
+        player2 = new Player("Spieler 2", 0, false);
+
+        playerOneOnMove.setImage(new Image("/images/OnMove.png"));
+
+
     }
 
     /**
@@ -158,8 +190,8 @@ public class Controller {
      */
     @FXML
     void addPointPlayerOne(MouseEvent event) {
-        int count = Integer.parseInt(player1Count.getText()) + 1;
-        player1Count.setText(count + "");
+        player1.setPoints(player1.getPoints()+1);
+        player1Count.setText(player1.getPoints() + "");
     }
 
     /**
@@ -169,32 +201,54 @@ public class Controller {
      */
     @FXML
     void addPointPlayerTwo(MouseEvent event) {
-        int count = Integer.parseInt(player2Count.getText()) + 1;
-        player2Count.setText(count + "");
+        player2.setPoints(player2.getPoints()+1);
+        player2Count.setText(player2.getPoints() + "");
     }
 
     /**
      * Changes name for player one
      *
      * @param event Unused
-     * @throws Exception If the NewNamePopUp.fxml can not be found
-     * @see NewNamePopUp
+     * @throws Exception If the ChangeNameDialog.fxml can not be found
+     * @see ChangeNameDialog
      */
     @FXML
     void changeNamePlayerOne(MouseEvent event) throws Exception {
-        NewNamePopUp.display(player1);
+        ChangeNameDialog.display(player1);
+        player1Name.setText(player1.getName());
     }
 
     /**
      * Changes name for player two
      *
      * @param event Unused
-     * @throws Exception If the NewNamePopUp.fxml can not be found
-     * @see NewNamePopUp
+     * @throws Exception If the ChangeNameDialog.fxml can not be found
+     * @see ChangeNameDialog
      */
     @FXML
     void changeNamePlayerTwo(MouseEvent event) throws Exception {
-        NewNamePopUp.display(player2);
+        ChangeNameDialog.display(player2);
+        player2Name.setText(player2.getName());
+    }
+
+    void changeOnMove(){
+        if(player1.isOnMove()){
+            player1.setOnMove(false);
+            playerOneOnMove.setImage(new Image("/images/NotOnMove.png"));
+            player2.setOnMove(true);
+            playerTwoOnMove.setImage(new Image("/images/OnMove.png"));
+        }else{
+            player2.setOnMove(false);
+            playerTwoOnMove.setImage(new Image("/images/NotOnMove.png"));
+            player1.setOnMove(true);
+            playerOneOnMove.setImage(new Image("/images/OnMove.png"));
+        }
+    }
+
+    Player getWinner(){
+        if(player1.getPoints() > player2.getPoints()) return player1;
+        if(player1.getPoints() < player2.getPoints()) return player2;
+        return new Player("Keiner",0,false);
     }
 
     /**
@@ -203,7 +257,7 @@ public class Controller {
      * @param event Unused
      */
     @FXML
-    void flipCard(MouseEvent event) {
+    void flipCard(MouseEvent event){
         int x = (int) Math.floor((event.getSceneX() - 350) / 100);
         int y = (int) Math.floor((event.getSceneY() - 70) / 100);
         int cardID = (6 * y + x);
@@ -217,7 +271,47 @@ public class Controller {
                 img30,img31,img32,img33,img34,img35
         };
 
-        images[cardID].setImage(new Image(cards.getCard(cardID).getImgURL()));
+        if (flipped == 0) {
+            if (cards.getCard(cardID).isOnBoard()){
+                images[cardID].setImage(new Image(cards.getCard(cardID).getImgURL()));
+                flippedCardOne = cardID;
+                flipped++;
+            }
+        }else if(flipped == 1){
+            if (cardID != flippedCardOne && cards.getCard(cardID).isOnBoard()) {
+                images[cardID].setImage(new Image(cards.getCard(cardID).getImgURL()));
+                flippedCardTwo = cardID;
+                flipped++;
+            }
+        }else{
+            if(cards.getCard(flippedCardOne).getPairID() == cards.getCard(flippedCardTwo).getPairID()){
+
+                if(player1.isOnMove()){
+                    addPointPlayerOne(null);
+                }else{
+                    addPointPlayerTwo(null);
+                }
+
+                images[flippedCardOne].setImage(new Image("/images/-1.png"));
+                images[flippedCardTwo].setImage(new Image("/images/-1.png"));
+                cards.getCard(flippedCardOne).setOnBoard(false);
+                cards.getCard(flippedCardTwo).setOnBoard(false);
+
+                pairCount--;
+                if(pairCount == 0){
+                    GameEndDialog.display(getWinner());
+                }
+            }else{
+
+                changeOnMove();
+
+                images[flippedCardOne].setImage(new Image("/images/hidden.png"));
+                images[flippedCardTwo].setImage(new Image("/images/hidden.png"));
+            }
+            flipped = 0;
+            flippedCardOne = -1;
+            flippedCardTwo = -1;
+        }
     }
 
     /**
