@@ -24,7 +24,7 @@ public class CardList {
     private void createCards(){
         for (int i = 0; i < 36; i++) {
             String imgURL = "/images/"+i%18+".png";
-            deepList.add(new Card(imgURL, i%18));
+            deepList.add(new Card(imgURL, i%18, true));
         }
     }
 
@@ -49,7 +49,7 @@ public class CardList {
     }
 
     /**
-     * Randomly shuffle all contents of the worklist
+     * Randomly shuffles all contents of the worklist
      */
     public void shuffle(){
         Collections.shuffle(workList);
