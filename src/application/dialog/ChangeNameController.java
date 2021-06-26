@@ -1,4 +1,4 @@
-package application.popup;
+package application.dialog;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,10 +15,10 @@ import javafx.scene.input.KeyEvent;
  * @version 1.0.0
  * @since 25-06-2021
  *
- * @see NewNamePopUp
+ * @see ChangeNameDialog
  */
 
-public class PopUpController {
+public class ChangeNameController {
 
     @FXML
     private TextField newName;
@@ -35,8 +35,8 @@ public class PopUpController {
      */
     @FXML
     void getName(ActionEvent event) {
-        NewNamePopUp.p.setText(newName.getText());
-        NewNamePopUp.window.close();
+        ChangeNameDialog.currentPlayer.setName(newName.getText());
+        ChangeNameDialog.window.close();
     }
     /**
      * Sets player name to content of the TextField and closes the Pop-Up upon pressing the "Enter" key in the TextField
@@ -45,8 +45,8 @@ public class PopUpController {
     @FXML
     void getNameEnter(KeyEvent event) {
         if(event.getCode() == KeyCode.ENTER){
-            NewNamePopUp.p.setText(newName.getText());
-            NewNamePopUp.window.close();
+            ChangeNameDialog.currentPlayer.setName(newName.getText());
+            ChangeNameDialog.window.close();
         }
     }
 
