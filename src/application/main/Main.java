@@ -19,6 +19,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    static Stage window;
+
     /**
      * The main method is used to launch the Application
      * @param args Unused
@@ -34,10 +36,15 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
+        window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/MemoryGUI.fxml"));
 
-        primaryStage.setTitle("Knerten Memory");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        window.setTitle("Knerten Memory");
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+    public static void close(){
+        window.close();
     }
 }
