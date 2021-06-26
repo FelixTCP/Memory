@@ -11,14 +11,16 @@ package application.logic;
 public class Card {
     private String imgURL;
     private int pairID;
+    private boolean onBoard;
 
     /**
      * @param imgURL Used to reference the Image (.png) that the Card should display
      * @param pairID Every pair of cards has a specific pairID that is used to check if that correct pair was found
      */
-    public Card(String imgURL, int pairID) {
+    public Card(String imgURL, int pairID, boolean onBoard) {
         this.imgURL = imgURL;
         this.pairID = pairID;
+        this.onBoard = onBoard;
     }
 
     /**
@@ -35,5 +37,11 @@ public class Card {
      */
     public int getPairID() {
         return pairID;
+    }
+
+    public boolean isOnBoard(){return onBoard;}
+
+    public void setOnBoard(boolean onBoard) {
+        this.onBoard = onBoard;
     }
 }
