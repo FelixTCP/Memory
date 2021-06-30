@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -32,18 +33,43 @@ public class Main extends Application {
     /**
      * The start method is called when the Application is launched
      * @param primaryStage The displayed GUI Stage
-     * @throws Exception If the .fxml document can not be found
      */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage){
         window = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/MemoryGUI.fxml"));
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/MemoryGUI.fxml"));
+            window.setScene(new Scene(root));
+        }catch(Exception e){
+            //this will never occur
+            e.printStackTrace();
+        }
 
-        window.setTitle("Knerten Memory");
-        window.setScene(new Scene(root));
+        window.setTitle("Memory");
+        window.getIcons().add(new Image("images/hidden.png"));
+
+        disableDarkMode();
+
+        window.setResizable(false);
         window.show();
     }
 
+
+    static void enableDarkMode(){
+        window.getScene().getStylesheets().clear();
+        setUserAgentStylesheet(null);
+        window.getScene().getStylesheets().add(Main.class.getResource("/css/darkMode.css").toExternalForm());
+    }
+
+    static void disableDarkMode(){
+        window.getScene().getStylesheets().clear();
+        setUserAgentStylesheet(null);
+        window.getScene().getStylesheets().add(Main.class.getResource("/css/lightMode.css").toExternalForm());
+    }
+
+    /**
+     * Closes the Application
+     */
     public static void close(){
         window.close();
     }
