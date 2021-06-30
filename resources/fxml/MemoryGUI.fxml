@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,7 +13,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.main.Controller">
    <children>
-      <GridPane layoutX="350.0" layoutY="70.0">
+      <GridPane layoutX="349.0" layoutY="68.0" style="-fx-border-color: black;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
@@ -29,186 +31,654 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <ImageView fx:id="img0" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img7" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img12" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img13" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img18" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img19" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img24" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img25" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img30" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img31" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img2" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img8" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img9" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img14" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img15" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img20" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img21" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img26" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img27" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img32" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img33" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img10" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img11" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img16" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img17" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img22" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img23" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img28" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img29" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img34" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="img35" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../images/hidden.png" />
-               </image>
-            </ImageView>
+            <GridPane style="-fx-border-color: black;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img0" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img7" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img12" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img13" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img18" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img19" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img24" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img25" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img30" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img31" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img2" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img8" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img9" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img14" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img15" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img20" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img21" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img26" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img27" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img32" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img33" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img10" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img11" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img16" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img17" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img22" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img23" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img28" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img29" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img34" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img35" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hidden.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </GridPane>
          </children>
       </GridPane>
       <GridPane layoutX="46.0" layoutY="68.0">
@@ -267,5 +737,440 @@
             <ImageView fx:id="playerTwoOnMove" fitHeight="47.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
          </children>
       </GridPane>
+      <GridPane layoutX="56.0" layoutY="170.0" prefHeight="152.0" prefWidth="190.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img0" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img1" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img2" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img3" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img4" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img5" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img6" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img7" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img8" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img9" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img10" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img11" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img12" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img13" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img14" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img15" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img16" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player1img17" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="56.0" layoutY="476.0" prefHeight="152.0" prefWidth="190.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img1" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img2" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img3" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img4" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img5" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img6" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img0" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img7" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img8" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img9" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img10" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img11" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img12" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img13" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img14" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img15" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img16" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="player2img17" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <Button layoutX="56.0" layoutY="652.0" mnemonicParsing="false" onMouseClicked="#displayOptions" text="Einstellungen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
