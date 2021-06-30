@@ -39,8 +39,16 @@ public class Card {
         return pairID;
     }
 
+    /**
+     * Returns if the Card is still in the game
+     * @return onBoard
+     */
     public boolean isOnBoard(){return onBoard;}
 
+    /**
+     * Sets onBoard
+     * @param onBoard onBoard value
+     */
     public void setOnBoard(boolean onBoard) {
         this.onBoard = onBoard;
     }
