@@ -1,0 +1,16 @@
+.root{
+	-fx-background-color: #36393f;
+}
+
+.button{
+	-fx-background-color: dimgrey;
+	-fx-text-fill: #f4f4f4;
+}
+
+.label{
+	-fx-text-fill: #f4f4f4;
+}
+
+.check-box{
+	-fx-text-fill: #f4f4f4;
+}
