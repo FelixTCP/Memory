@@ -1,11 +1,11 @@
 package application.main;
 
-//TODO Add commentation
-
-import application.logic.CardList;
-import application.logic.Player;
 import application.dialog.ChangeNameDialog;
 import application.dialog.GameEndDialog;
+import application.dialog.OptionsController;
+import application.dialog.OptionsDialog;
+import application.logic.CardList;
+import application.logic.Player;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -21,144 +21,156 @@ import javafx.scene.input.MouseEvent;
  * @since 24-06-2021
  */
 public class Controller {
-    @FXML
-    private ImageView img0;
 
     @FXML
-    private ImageView img1;
+    private ImageView img0, img1, img2, img3, img4, img5, img6, img7, img8, img9;
+    @FXML
+    private ImageView img10, img11, img12, img13, img14, img15, img16, img17, img18, img19;
+    @FXML
+    private ImageView img20, img21, img22, img23, img24, img25, img26, img27, img28, img29;
+    @FXML
+    private ImageView img30, img31, img32, img33, img34, img35;
+
 
     @FXML
-    private ImageView img6;
+    private Label player1Name, player1Count, player2Name, player2Count;
+    @FXML
+    private ImageView playerOneOnMove, playerTwoOnMove;
+
 
     @FXML
-    private ImageView img7;
+    private ImageView player1img0, player1img1, player1img2, player1img3, player1img4;
+    @FXML
+    private ImageView player1img5, player1img6, player1img7, player1img8, player1img9;
+    @FXML
+    private ImageView player1img10, player1img11, player1img12, player1img13, player1img14;
+    @FXML
+    private ImageView player1img15, player1img16, player1img17;
+
 
     @FXML
-    private ImageView img12;
-
+    private ImageView player2img0, player2img1, player2img2, player2img3, player2img4;
     @FXML
-    private ImageView img13;
-
+    private ImageView player2img5, player2img6, player2img7, player2img8, player2img9;
     @FXML
-    private ImageView img18;
-
+    private ImageView player2img10, player2img11, player2img12, player2img13, player2img14;
     @FXML
-    private ImageView img19;
-
-    @FXML
-    private ImageView img24;
-
-    @FXML
-    private ImageView img25;
-
-    @FXML
-    private ImageView img30;
-
-    @FXML
-    private ImageView img31;
-
-    @FXML
-    private ImageView img2;
-
-    @FXML
-    private ImageView img3;
-
-    @FXML
-    private ImageView img8;
-
-    @FXML
-    private ImageView img9;
-
-    @FXML
-    private ImageView img14;
-
-    @FXML
-    private ImageView img15;
-
-    @FXML
-    private ImageView img20;
-
-    @FXML
-    private ImageView img21;
-
-    @FXML
-    private ImageView img26;
-
-    @FXML
-    private ImageView img27;
-
-    @FXML
-    private ImageView img32;
-
-    @FXML
-    private ImageView img33;
-
-    @FXML
-    private ImageView img4;
-
-    @FXML
-    private ImageView img5;
-
-    @FXML
-    private ImageView img10;
-
-    @FXML
-    private ImageView img11;
-
-    @FXML
-    private ImageView img16;
-
-    @FXML
-    private ImageView img17;
-
-    @FXML
-    private ImageView img22;
-
-    @FXML
-    private ImageView img23;
-
-    @FXML
-    private ImageView img28;
-
-    @FXML
-    private ImageView img29;
-
-    @FXML
-    private ImageView img34;
-
-    @FXML
-    private ImageView img35;
-
-    @FXML
-    private Label player1Name;
-
-    @FXML
-    private Label player1Count;
-
-    @FXML
-    private Label player2Name;
-
-    @FXML
-    private Label player2Count;
-
-    @FXML
-    private ImageView playerOneOnMove;
-
-    @FXML
-    private ImageView playerTwoOnMove;
-
+    private ImageView player2img15, player2img16, player2img17;
 
     private CardList cards;
 
-    private Player player1;
-    private Player player2;
+    private Player player1, player2;
 
     private int pairCount;
 
-    private int flipped;
+    private int flippedCardOne, flippedCardTwo;
 
-    private int flippedCardOne;
-    private int flippedCardTwo;
+    private String hiddenURL;
+
+    /**
+     * For better readablity this method outsources the creation of the array
+     *
+     * @return An array that contains ImageView objects of all Cards
+     */
+    ImageView[] getImageList() {
+        return new ImageView[]{
+                img0, img1, img2, img3, img4, img5,
+                img6, img7, img8, img9, img10, img11,
+                img12, img13, img14, img15, img16, img17,
+                img18, img19, img20, img21, img22, img23,
+                img24, img25, img26, img27, img28, img29,
+                img30, img31, img32, img33, img34, img35
+        };
+    }
+
+    /**
+     * For better readablity this method outsources the creation of the array
+     *
+     * @return An array that contains mageView objects of all Cards that player one collected
+     */
+    ImageView[] getPlayerOneCardList(){
+        return new ImageView[]{
+                player1img0, player1img1, player1img2, player1img3, player1img4,
+                player1img5, player1img6, player1img7, player1img8, player1img9,
+                player1img10, player1img11, player1img12, player1img13, player1img14,
+                player1img15, player1img16, player1img17
+        };
+    }
+
+    /**
+     * For better readablity this method outsources the creation of the array
+     *
+     * @return An array that contains mageView objects of all Cards that player two collected
+     */
+    ImageView[] getPlayerTwoCardList(){
+        return new ImageView[]{
+                player2img0, player2img1, player2img2, player2img3, player2img4,
+                player2img5, player2img6, player2img7, player2img8, player2img9,
+                player2img10, player2img11, player2img12, player2img13, player2img14,
+                player2img15, player2img16, player2img17
+        };
+    }
+
+    void resetHidden(){
+        ImageView[] images = getImageList();
+
+        for (ImageView image : images) {
+            image.setImage(new Image(hiddenURL));
+        }
+    }
+
+    void resetPlayerOneCards(){
+        ImageView[] playerOneCards = getPlayerOneCardList();
+
+        for (ImageView playerOneCard : playerOneCards) {
+            playerOneCard.setImage(new Image("/images/-1.png"));
+        }
+    }
+
+    void resetPlayerTwoCards(){
+        ImageView[] playerTwoCards = getPlayerTwoCardList();
+
+        for (ImageView playerTwoCard : playerTwoCards) {
+            playerTwoCard.setImage(new Image("/images/-1.png"));
+        }
+    }
+
+    /**
+     * Sets all attributes back to their default values
+     * Cards are newly shuffled and put back on the Board
+     * Playernames are saved
+     */
+    public void reset() {
+        cards = new CardList(OptionsDialog.getCurrentSet());
+        cards.shuffle();
+
+        pairCount = 18;
+        flippedCardOne = -1;
+        flippedCardTwo = -1;
+
+        player1.setPoints(0);
+        player2.setPoints(0);
+
+        player1.setOnMove(true);
+        player2.setOnMove(false);
+
+        player1Count.setText(player1.getPoints() + "");
+        player2Count.setText(player2.getPoints() + "");
+
+        if (!OptionsController.isKeepNames()) {
+            player1.setName("Spieler 1");
+            player2.setName("Spieler 2");
+            player1Name.setText(player1.getName());
+            player2Name.setText(player2.getName());
+        }
+
+        playerOneOnMove.setImage(new Image("/images/OnMove.png"));
+        playerTwoOnMove.setImage(new Image("/images/NotOnMove.png"));
+
+        resetHidden();
+        resetPlayerOneCards();
+        resetPlayerTwoCards();
+    }
 
     /**
      * Called when the GUI is launched
@@ -166,42 +178,31 @@ public class Controller {
      */
     @FXML
     public void initialize() {
-        cards = new CardList();
-        cards.shuffle();
-
-        pairCount = 18;
-
-        flipped = 0;
-        flippedCardOne = -1;
-        flippedCardTwo = -1;
-
         player1 = new Player("Spieler 1", 0, true);
         player2 = new Player("Spieler 2", 0, false);
 
-        playerOneOnMove.setImage(new Image("/images/OnMove.png"));
+        hiddenURL = "/images/hidden.png";
 
-
+        reset();
     }
 
     /**
      * Adds a point for player one
      *
-     * @param event Unused
      */
     @FXML
-    void addPointPlayerOne(MouseEvent event) {
-        player1.setPoints(player1.getPoints()+1);
+    void addPointPlayerOne() {
+        player1.setPoints(player1.getPoints() + 1);
         player1Count.setText(player1.getPoints() + "");
     }
 
     /**
      * Adds a point for player two
      *
-     * @param event Unused
      */
     @FXML
-    void addPointPlayerTwo(MouseEvent event) {
-        player2.setPoints(player2.getPoints()+1);
+    void addPointPlayerTwo() {
+        player2.setPoints(player2.getPoints() + 1);
         player2Count.setText(player2.getPoints() + "");
     }
 
@@ -209,11 +210,10 @@ public class Controller {
      * Changes name for player one
      *
      * @param event Unused
-     * @throws Exception If the ChangeNameDialog.fxml can not be found
      * @see ChangeNameDialog
      */
     @FXML
-    void changeNamePlayerOne(MouseEvent event) throws Exception {
+    void changeNamePlayerOne(MouseEvent event) {
         ChangeNameDialog.display(player1);
         player1Name.setText(player1.getName());
     }
@@ -222,93 +222,93 @@ public class Controller {
      * Changes name for player two
      *
      * @param event Unused
-     * @throws Exception If the ChangeNameDialog.fxml can not be found
      * @see ChangeNameDialog
      */
     @FXML
-    void changeNamePlayerTwo(MouseEvent event) throws Exception {
+    void changeNamePlayerTwo(MouseEvent event){
         ChangeNameDialog.display(player2);
         player2Name.setText(player2.getName());
     }
 
-    void changeOnMove(){
-        if(player1.isOnMove()){
+    /**
+     * Changes the player that is on move - shown by a red circle next to the players name
+     */
+    void changeOnMove() {
+        if (player1.isOnMove()) {
             player1.setOnMove(false);
             playerOneOnMove.setImage(new Image("/images/NotOnMove.png"));
             player2.setOnMove(true);
             playerTwoOnMove.setImage(new Image("/images/OnMove.png"));
-        }else{
-            player2.setOnMove(false);
-            playerTwoOnMove.setImage(new Image("/images/NotOnMove.png"));
+        } else {
             player1.setOnMove(true);
             playerOneOnMove.setImage(new Image("/images/OnMove.png"));
+            player2.setOnMove(false);
+            playerTwoOnMove.setImage(new Image("/images/NotOnMove.png"));
         }
     }
 
-    Player getWinner(){
-        if(player1.getPoints() > player2.getPoints()) return player1;
-        if(player1.getPoints() < player2.getPoints()) return player2;
-        return new Player("Keiner",0,false);
+    /**
+     * Determines the winner - if both players have the same amount of point its a draw
+     *
+     * @return The winner
+     */
+    Player getWinner() {
+        if (player1.getPoints() > player2.getPoints()) return player1;
+        if (player1.getPoints() < player2.getPoints()) return player2;
+        return new Player(null, 0, false);
     }
 
     /**
-     * Flips the given Card
+     * Flips the given Card (Card is calculated by mouse position)
      *
      * @param event Unused
      */
     @FXML
-    void flipCard(MouseEvent event){
+    void flipCard(MouseEvent event) {
+        ImageView[] images = getImageList();
+
         int x = (int) Math.floor((event.getSceneX() - 350) / 100);
         int y = (int) Math.floor((event.getSceneY() - 70) / 100);
         int cardID = (6 * y + x);
 
-        ImageView[] images = {
-                img0,img1,img2,img3,img4,img5,
-                img6,img7,img8,img9,img10,img11,
-                img12,img13,img14,img15,img16,img17,
-                img18,img19,img20,img21,img22,img23,
-                img24,img25,img26,img27,img28,img29,
-                img30,img31,img32,img33,img34,img35
-        };
-
-        if (flipped == 0) {
-            if (cards.getCard(cardID).isOnBoard()){
+        if (flippedCardOne == -1) {
+            if (cards.getCard(cardID).isOnBoard()) {
                 images[cardID].setImage(new Image(cards.getCard(cardID).getImgURL()));
                 flippedCardOne = cardID;
-                flipped++;
             }
-        }else if(flipped == 1){
+        } else if (flippedCardTwo == -1) {
             if (cardID != flippedCardOne && cards.getCard(cardID).isOnBoard()) {
                 images[cardID].setImage(new Image(cards.getCard(cardID).getImgURL()));
                 flippedCardTwo = cardID;
-                flipped++;
             }
-        }else{
-            if(cards.getCard(flippedCardOne).getPairID() == cards.getCard(flippedCardTwo).getPairID()){
-
-                if(player1.isOnMove()){
-                    addPointPlayerOne(null);
-                }else{
-                    addPointPlayerTwo(null);
+        } else {
+            if (cards.getCard(flippedCardOne).getPairID() == cards.getCard(flippedCardTwo).getPairID()) {
+                if (player1.isOnMove()) {
+                    ImageView[] collectedCardsOne = getPlayerOneCardList();
+                    collectedCardsOne[player1.getPoints()].setImage(new Image(cards.getCard(flippedCardOne).getImgURL()));
+                    addPointPlayerOne();
+                } else {
+                    ImageView[] collectedCardsTwo = getPlayerTwoCardList();
+                    collectedCardsTwo[player2.getPoints()].setImage(new Image(cards.getCard(flippedCardOne).getImgURL()));
+                    addPointPlayerTwo();
                 }
-
                 images[flippedCardOne].setImage(new Image("/images/-1.png"));
                 images[flippedCardTwo].setImage(new Image("/images/-1.png"));
                 cards.getCard(flippedCardOne).setOnBoard(false);
                 cards.getCard(flippedCardTwo).setOnBoard(false);
 
                 pairCount--;
-                if(pairCount == 0){
-                    GameEndDialog.display(getWinner());
+                if (pairCount == 0 || (!OptionsController.isEndGame() && player1.getPoints() > 9 || player2.getPoints() > 9)) {
+                    GameEndDialog.display(getWinner(), this);
                 }
-            }else{
 
+                if (OptionsController.isAlwaysSwap()) changeOnMove();
+            } else {
                 changeOnMove();
 
-                images[flippedCardOne].setImage(new Image("/images/hidden.png"));
-                images[flippedCardTwo].setImage(new Image("/images/hidden.png"));
+                images[flippedCardOne].setImage(new Image(hiddenURL));
+                images[flippedCardTwo].setImage(new Image(hiddenURL));
             }
-            flipped = 0;
             flippedCardOne = -1;
             flippedCardTwo = -1;
         }
@@ -321,42 +321,27 @@ public class Controller {
      */
     @FXML
     void flipAllCards(MouseEvent event) {
-        img0.setImage(new Image(cards.getCard(0).getImgURL()));
-        img1.setImage(new Image(cards.getCard(1).getImgURL()));
-        img2.setImage(new Image(cards.getCard(2).getImgURL()));
-        img3.setImage(new Image(cards.getCard(3).getImgURL()));
-        img4.setImage(new Image(cards.getCard(4).getImgURL()));
-        img5.setImage(new Image(cards.getCard(5).getImgURL()));
-        img6.setImage(new Image(cards.getCard(6).getImgURL()));
-        img7.setImage(new Image(cards.getCard(7).getImgURL()));
-        img8.setImage(new Image(cards.getCard(8).getImgURL()));
-        img9.setImage(new Image(cards.getCard(9).getImgURL()));
-        img10.setImage(new Image(cards.getCard(10).getImgURL()));
-        img11.setImage(new Image(cards.getCard(11).getImgURL()));
-        img12.setImage(new Image(cards.getCard(12).getImgURL()));
-        img13.setImage(new Image(cards.getCard(13).getImgURL()));
-        img14.setImage(new Image(cards.getCard(14).getImgURL()));
-        img15.setImage(new Image(cards.getCard(15).getImgURL()));
-        img16.setImage(new Image(cards.getCard(16).getImgURL()));
-        img17.setImage(new Image(cards.getCard(17).getImgURL()));
-        img18.setImage(new Image(cards.getCard(18).getImgURL()));
-        img19.setImage(new Image(cards.getCard(19).getImgURL()));
-        img20.setImage(new Image(cards.getCard(20).getImgURL()));
-        img21.setImage(new Image(cards.getCard(21).getImgURL()));
-        img22.setImage(new Image(cards.getCard(22).getImgURL()));
-        img23.setImage(new Image(cards.getCard(23).getImgURL()));
-        img24.setImage(new Image(cards.getCard(24).getImgURL()));
-        img25.setImage(new Image(cards.getCard(25).getImgURL()));
-        img26.setImage(new Image(cards.getCard(26).getImgURL()));
-        img27.setImage(new Image(cards.getCard(27).getImgURL()));
-        img28.setImage(new Image(cards.getCard(28).getImgURL()));
-        img29.setImage(new Image(cards.getCard(29).getImgURL()));
-        img30.setImage(new Image(cards.getCard(30).getImgURL()));
-        img31.setImage(new Image(cards.getCard(31).getImgURL()));
-        img32.setImage(new Image(cards.getCard(32).getImgURL()));
-        img33.setImage(new Image(cards.getCard(33).getImgURL()));
-        img34.setImage(new Image(cards.getCard(34).getImgURL()));
-        img35.setImage(new Image(cards.getCard(35).getImgURL()));
+        ImageView[] images = getImageList();
+
+        int i = 0;
+        for (ImageView image : images) {
+            image.setImage(new Image(cards.getCard(i).getImgURL()));
+            i++;
+        }
     }
 
+    @FXML
+    void displayOptions(){
+        OptionsDialog.display();
+        if(OptionsController.isDarkMode()){
+            Main.enableDarkMode();
+            hiddenURL = "/images/hiddenDark.png";
+        }
+        else{
+            Main.disableDarkMode();
+            hiddenURL = "/images/hidden.png";
+        }
+        resetHidden();
+        if(OptionsController.somethingChanged) reset();
+    }
 }
