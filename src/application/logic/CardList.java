@@ -2,6 +2,7 @@ package application.logic;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 /**
  * <h2>The class CardList is used to reference the Memory-Cards in the GUI</h2>
@@ -21,9 +22,9 @@ public class CardList {
     /**
      * Used to fill the deeplist with cards
      */
-    private void createCards(){
+    private void createCards(String set){
         for (int i = 0; i < 36; i++) {
-            String imgURL = "/images/"+i%18+".png";
+            String imgURL = "/images/"+set.toLowerCase()+"/"+i%18+".jpg";
             deepList.add(new Card(imgURL, i%18, true));
         }
     }
@@ -32,11 +33,11 @@ public class CardList {
     /**
      * Creates a deeplist and a worklist and fills both with cards
      */
-    public CardList(){
+    public CardList(String set){
         deepList = new ArrayList<>();
         workList = new ArrayList<>();
 
-        createCards();
+        createCards(set);
 
         workList = (ArrayList<Card>) deepList.clone();
     }
