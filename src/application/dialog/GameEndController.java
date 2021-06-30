@@ -6,6 +6,16 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+/**
+ *<h2>The class GameEndController is used to manage the GameEndDialog GUI</h2>
+ *
+ * @author Felix Wensky
+ * @version 1.0.0
+ * @since 26-06-2021
+ *
+ * @see GameEndDialog
+ */
+
 public class GameEndController {
 
     @FXML
@@ -20,24 +30,36 @@ public class GameEndController {
     @FXML
     private Button endButton;
 
+    /**
+     * Called when the game is finished
+     */
     @FXML
     public void initialize(){
-        if (GameEndDialog.currentPlayer.getName().equals("Keiner")) {
-            winnerLabel.setText("Unentschieden!");
+        if (GameEndDialog.currentPlayer.getName() == null) {
+            winnerLabel.setText("Es ist ein Unentschieden!");
         }else{
             winnerLabel.setText(GameEndDialog.currentPlayer.getName() + " gewinnt das Spiel!");
         }
     }
 
+    /**
+     * Closes the Application
+     * @param event Unused
+     */
     @FXML
     void close(ActionEvent event) {
         GameEndDialog.window.close();
         Main.close();
     }
 
+    /**
+     * Restarts the game
+     * @param event Unused
+     */
     @FXML
     void replay(ActionEvent event) {
-
+        GameEndDialog.main.reset();
+        GameEndDialog.window.close();
     }
 
 }
