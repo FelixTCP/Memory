@@ -9,7 +9,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 /**
- * <h2>The class PopUpController is used to manage the NewNamePopUp GUI</h2>
+ * <h2>The class ChangeNameController is used to manage the ChangeNameDialog GUI</h2>
  *
  * @author Felix Wensky
  * @version 1.0.0
