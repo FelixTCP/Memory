@@ -1,6 +1,5 @@
 package application.logic;
 
-
 /**
  *<h2>The class Player manages the players</h2>
  *
@@ -13,14 +12,13 @@ public class Player {
 
     private String name;
     private int points;
-    public boolean onMove;
+    private boolean onMove;
 
     /**
      * @param name The displayed name
      * @param points The players current score
      * @param onMove Boolean that indicates whether the player is currently on Move
      */
-
     public Player(String name, int points, boolean onMove) {
         this.name = name;
         this.points = points;
@@ -28,7 +26,7 @@ public class Player {
     }
 
     /**
-     * Returns the playername
+     * Returns the cardList
      * @return name
      */
     public String getName() {

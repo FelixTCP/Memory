@@ -19,8 +19,9 @@ import java.io.IOException;
  */
 
 public class ChangeNameDialog {
-
+    //The player whose name should be changed
     static Player currentPlayer;
+
     static Stage window;
 
     /**
@@ -32,29 +33,38 @@ public class ChangeNameDialog {
 
         window = new Stage();
         try {
+            //Loads the .fxml as a javafx Scene
             Parent root = FXMLLoader.load(ChangeNameDialog.class.getResource("/fxml/ChangeNameDialog.fxml"));
-            Scene scene = new Scene(root);
-            window.setScene(scene);
+            window.setScene(new Scene(root));
         } catch (IOException e) {
-            //this will never occur
+            //This will never occur
             e.printStackTrace();
         }
-
+        //The window has to be answered
         window.initModality(Modality.APPLICATION_MODAL);
+        //The window cannot be resized
         window.setResizable(false);
 
+        //Loads css for dark mode if enabled
         if(OptionsController.isDarkMode()) enableDarkMode();
         else disableDarkMode();
 
+        //Displays the change name menu
         window.showAndWait();
 
     }
 
+    /**
+     * The method enableDarkMode is used to add a css file to the scene that enables dark mode
+     */
     static void enableDarkMode(){
         window.getScene().getStylesheets().clear();
         window.getScene().getStylesheets().add(Main.class.getResource("/css/darkMode.css").toExternalForm());
     }
 
+    /**
+     * The method disableDarkMode is used to add a css file to the scene that enables light mode
+     */
     static void disableDarkMode(){
         window.getScene().getStylesheets().clear();
         window.getScene().getStylesheets().add(Main.class.getResource("/css/lightMode.css").toExternalForm());

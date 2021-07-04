@@ -14,6 +14,7 @@ import javafx.stage.Stage;
  * @version 1.0.0
  * @since 24-06-2021
  *
+ * @see Controller
  * @see javafx.application.Application
  * @see javafx.fxml.FXMLLoader
  */
@@ -54,16 +55,19 @@ public class Main extends Application {
         window.show();
     }
 
-
+    /**
+     * The enableDarkMode method is used to enable the dark mode
+     */
     static void enableDarkMode(){
         window.getScene().getStylesheets().clear();
-        setUserAgentStylesheet(null);
         window.getScene().getStylesheets().add(Main.class.getResource("/css/darkMode.css").toExternalForm());
     }
 
+    /**
+     * The disableDarkMode method is used to disable the dark mode
+     */
     static void disableDarkMode(){
         window.getScene().getStylesheets().clear();
-        setUserAgentStylesheet(null);
         window.getScene().getStylesheets().add(Main.class.getResource("/css/lightMode.css").toExternalForm());
     }
 

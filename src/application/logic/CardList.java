@@ -2,7 +2,6 @@ package application.logic;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 /**
  * <h2>The class CardList is used to reference the Memory-Cards in the GUI</h2>
@@ -16,60 +15,40 @@ import java.util.HashMap;
 
 public class CardList {
 
-    private ArrayList<Card> deepList;
-    private ArrayList<Card> workList;
+    private ArrayList<Card> cardList;
 
     /**
-     * Used to fill the deeplist with cards
+     * Used to fill the cardList with cards
      */
     private void createCards(String set){
         for (int i = 0; i < 36; i++) {
             String imgURL = "/images/"+set.toLowerCase()+"/"+i%18+".jpg";
-            deepList.add(new Card(imgURL, i%18, true));
+            cardList.add(new Card(imgURL, i%18, true));
         }
     }
 
-
     /**
-     * Creates a deeplist and a worklist and fills both with cards
+     * Creates a cardList and fills it with cards
      */
     public CardList(String set){
-        deepList = new ArrayList<>();
-        workList = new ArrayList<>();
+        cardList = new ArrayList<>();
 
         createCards(set);
-
-        workList = (ArrayList<Card>) deepList.clone();
     }
 
     /**
-     * Resets the worklist to default (deeplist) state
-     */
-    public void resetList(){
-        workList = (ArrayList<Card>) deepList.clone();
-    }
-
-    /**
-     * Randomly shuffles all contents of the worklist
+     * Randomly shuffles all contents of the cardList
+     * @see java.util.Collections
      */
     public void shuffle(){
-        Collections.shuffle(workList);
+        Collections.shuffle(cardList);
     }
 
     /**
-     * Returns the worklist object
-     * @return worklist
-     */
-    public ArrayList<Card> getList(){
-        return workList;
-    }
-
-    /**
-     *
      * @param index Used to reference a card in the list by its index
      * @return The card with the given index
      */
     public Card getCard(int index){
-        return workList.get(index);
+        return cardList.get(index);
     }
 }

@@ -9,13 +9,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *<h2>The class GameEndDialog displays Pop-Up Alert when the game has ended</h2>
+ *<h2>The class GameEndDialog displays a Pop-Up Alert when the game has ended</h2>
  *
  * @author Felix Wensky
  * @version 1.0.0
  * @since 26-06-2021
  *
- * @see GameEndDialog
+ * @see GameEndController
  */
 
 public class GameEndDialog {
@@ -51,11 +51,17 @@ public class GameEndDialog {
 
     }
 
+    /**
+     * The method enableDarkMode is used to add a css file to the scene that enables dark mode
+     */
     static void enableDarkMode(){
         window.getScene().getStylesheets().clear();
         window.getScene().getStylesheets().add(Main.class.getResource("/css/darkMode.css").toExternalForm());
     }
 
+    /**
+     * The method disableDarkMode is used to add a css file to the scene that enables light mode
+     */
     static void disableDarkMode(){
         window.getScene().getStylesheets().clear();
         window.getScene().getStylesheets().add(Main.class.getResource("/css/lightMode.css").toExternalForm());

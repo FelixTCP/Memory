@@ -31,7 +31,7 @@ public class GameEndController {
     private Button endButton;
 
     /**
-     * Called when the game is finished
+     * Called when the game is finished - Sets the winnerLabel to display the winner
      */
     @FXML
     public void initialize(){
@@ -44,20 +44,18 @@ public class GameEndController {
 
     /**
      * Closes the Application
-     * @param event Unused
      */
     @FXML
-    void close(ActionEvent event) {
+    void close() {
         GameEndDialog.window.close();
         Main.close();
     }
 
     /**
      * Restarts the game
-     * @param event Unused
      */
     @FXML
-    void replay(ActionEvent event) {
+    void replay() {
         GameEndDialog.main.reset();
         GameEndDialog.window.close();
     }
