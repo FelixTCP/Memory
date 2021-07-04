@@ -39,24 +39,26 @@ public class Main extends Application {
     public void start(Stage primaryStage){
         window = primaryStage;
         try {
+            //Loads the .fxml as a javafx Scene
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/MemoryGUI.fxml"));
             window.setScene(new Scene(root));
         }catch(Exception e){
-            //this will never occur
+            //This will never occur
             e.printStackTrace();
         }
-
+        //As per default the window is in light mode
+        disableDarkMode();
+        //The window has the Title "Memory"
         window.setTitle("Memory");
+        //The window cannot be resized
+        window.setResizable(false);
         window.getIcons().add(new Image("images/hidden.png"));
 
-        disableDarkMode();
-
-        window.setResizable(false);
         window.show();
     }
 
     /**
-     * The enableDarkMode method is used to enable the dark mode
+     * The method enableDarkMode is used to add a css file to the scene that enables dark mode
      */
     static void enableDarkMode(){
         window.getScene().getStylesheets().clear();
@@ -64,7 +66,7 @@ public class Main extends Application {
     }
 
     /**
-     * The disableDarkMode method is used to disable the dark mode
+     * The method disableDarkMode is used to add a css file to the scene that enables light mode
      */
     static void disableDarkMode(){
         window.getScene().getStylesheets().clear();

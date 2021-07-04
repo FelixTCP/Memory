@@ -30,17 +30,16 @@ public class ChangeNameController {
     private Button okButton;
 
     /**
-     * Sets player name to content of the TextField and closes the Pop-Up upon pressind the "Fertig" button
-     * @param event Unused
+     * Sets player name to content of the TextField and closes the Pop-Up upon pressing the "Fertig" button
      */
     @FXML
-    void getName(ActionEvent event) {
+    void getName() {
         ChangeNameDialog.currentPlayer.setName(newName.getText());
         ChangeNameDialog.window.close();
     }
     /**
-     * Sets player name to content of the TextField and closes the Pop-Up upon pressing the "Enter" key in the TextField
-     * @param event Unused
+     * Sets player name to content of the TextField and closes the Pop-Up upon pressing the ENTER key in the TextField
+     * @param event Used to detect whether the ENTER key has been pressed
      */
     @FXML
     void getNameEnter(KeyEvent event) {

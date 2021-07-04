@@ -230,11 +230,10 @@ public class Controller {
     /**
      * Changes name for player one
      *
-     * @param event Unused
-     * @see ChangeNameDialog
+Dw     * @see ChangeNameDialog
      */
     @FXML
-    void changeNamePlayerOne(MouseEvent event) {
+    void changeNamePlayerOne() {
         ChangeNameDialog.display(player1);
         player1Name.setText(player1.getName());
     }
@@ -242,11 +241,10 @@ public class Controller {
     /**
      * Changes name for player two
      *
-     * @param event Unused
      * @see ChangeNameDialog
      */
     @FXML
-    void changeNamePlayerTwo(MouseEvent event){
+    void changeNamePlayerTwo(){
         ChangeNameDialog.display(player2);
         player2Name.setText(player2.getName());
     }
@@ -284,7 +282,7 @@ public class Controller {
     /**
      * Flips the given Card (Card is calculated by mouse position)
      *
-     * @param event Unused
+     * @param event Used to calculated the Cards the player has clicked at
      */
     @FXML
     void flipCard(MouseEvent event) {
@@ -364,11 +362,9 @@ public class Controller {
 
     /**
      * Flips all cards (used for debug)
-     *
-     * @param event Unused
      */
     @FXML
-    void flipAllCards(MouseEvent event) {
+    void flipAllCards() {
         ImageView[] images = getImageList();
 
         int i = 0;
@@ -380,6 +376,8 @@ public class Controller {
 
     /**
      * The displayOptions method is used to open the OptionsDialog and change the settings
+     *
+     * @see OptionsDialog
      */
     @FXML
     void displayOptions(){
