@@ -8,8 +8,6 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 /**
  * <h2>The class ChangeNameDialog displays a Pop-Up Alert used to set a new name for a player</h2>
  *
@@ -36,7 +34,7 @@ public class ChangeNameDialog {
             //Loads the .fxml as a javafx Scene
             Parent root = FXMLLoader.load(ChangeNameDialog.class.getResource("/fxml/ChangeNameDialog.fxml"));
             window.setScene(new Scene(root));
-        } catch (IOException e) {
+        } catch (Exception e) {
             //This will never occur
             e.printStackTrace();
         }
