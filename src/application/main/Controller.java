@@ -230,7 +230,7 @@ public class Controller {
     /**
      * Changes name for player one
      *
-Dw     * @see ChangeNameDialog
+     * @see ChangeNameDialog
      */
     @FXML
     void changeNamePlayerOne() {
