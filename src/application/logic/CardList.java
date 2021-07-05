@@ -38,7 +38,6 @@ public class CardList {
 
     /**
      * Randomly shuffles all contents of the cardList
-     * @see java.util.Collections
      */
     public void shuffle(){
         Collections.shuffle(cardList);
