@@ -45,13 +45,13 @@ public class CardList {
         Card h1 = new Card("",0,true);
         Card h2 = new Card("",0,true);
 
-        for(int x = 0; x < 36;x++)
-        {
+        for(int x = 0; x < 36;x++){
             zufallszahl = zufall.nextInt(36);
             h1 = cardList.get(x);
             h2 = cardList.get(zufallszahl);
             cardList.set(zufallszahl, h1);
             cardList.set(x, h2);
+        }
     }
 
     /**
